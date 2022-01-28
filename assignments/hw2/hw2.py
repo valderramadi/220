@@ -1,35 +1,57 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Darla Valderrama
+hw2.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: I will develop simple Python programs that create inputs/outputs do arithmetic.
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
+
 import math
 
 
 def sum_of_threes():
-    pass
+    user = eval(input("Enter an upper bound: "))
+    acc = 0
+    for i in range(0, user + 1, 3):
+        acc = acc + i
+    print(acc)
 
 
 def multiplication_table():
-    pass
+    for i in range(1, 11):
+        for my_mt in range(1, 11):
+            print(i * my_mt, end=" ")
+            print()
 
 
 def triangle_area():
-    pass
+    a_tri = eval(input("Enter side a length: "))
+    b_tri = eval(input("Enter side b length: "))
+    c_tri = eval(input("Enter side c length: "))
+    x_equa = (a_tri + b_tri + c_tri) / 2
+    area = math.sqrt(x_equa*(x_equa-a_tri)*(x_equa-b_tri)*(x_equa-c_tri))
+    print("Area is:", area)
 
 
 def sum_squares():
-    pass
+    a_sq = eval(input("Enter lower range: "))
+    b_sq = eval(input("Enter upper range: "))
+    acc = 0
+    for i in range(a_sq, b_sq + 1):
+        square = i ** 2
+        acc = acc + square
+    print(acc)
 
 
 def power():
-    pass
+    base = eval(input("Enter a base: "))
+    expo = eval(input("Enter a exponent: "))
+    acc = 1
+    for i in range(expo):
+        acc = acc * base
+    print(acc)
 
 
 if __name__ == '__main__':
