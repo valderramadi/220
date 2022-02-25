@@ -1,42 +1,67 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Darla Valderrama
+hw6.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: I will be working with strings and write functions that accept arguments and return values.
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
+import math
 
 
 def cash_converter():
-    pass
+    user_input = eval(input("Enter here desired integer: "))
+    print("That is ${:.2f}".format(user_input))
 
 
 def encode():
-    pass
+    user_input = input("Enter a message: ")
+    number_input = eval(input("Enter a key: "))
+    acc = ""
+    for coding in user_input:
+        i = ord(coding)
+        newbie = number_input + i
+        another_newbie = chr(newbie)
+        acc = acc + another_newbie
+    print(acc)
 
 
 def sphere_area(radius):
-    pass
+    area = 4 * math.pi * radius ** 2
+    return area
 
 
 def sphere_volume(radius):
-    pass
+    volume = (4/3) * math.pi * radius ** 3
+    return volume
 
 
 def sum_n(number):
-    pass
+    acc = 0
+    for i in range(number + 1):
+        acc += i
+    return acc
 
 
 def sum_n_cubes(number):
-    pass
+    acc = 0
+    for i in range(number + 1):
+        acc += i ** 3
+    return acc
 
 
 def encode_better():
-    pass
+    acc = ""
+    one_message = input("Enter desired message here: ")
+    two_message = input("Enter next desired message: ")
+    for i in range(len(one_message)):
+        primary = ord(one_message[i])
+        secondary = ord(two_message[i])
+        adding_keys = primary + secondary - 97
+        acc += chr(adding_keys)
+    print(acc)
+
 
 
 if __name__ == '__main__':
